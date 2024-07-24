@@ -1,4 +1,4 @@
-BeginnerJoinedTest = 初級課題 採用試験問題
+BeginnerJoinedTest = 初級課題 採用試験問題  
 JoinedTest = 入社テスト2023
 
 の内容となっています。
