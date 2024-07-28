@@ -1,6 +1,6 @@
 <?php
 // 課題2 プログラム時間シミュレーション問題
-function program_work_simulation($n, $x, $f, $s)
+function programWorkSimulation($n, $x, $f, $s)
 {
   $x = ceil(($x / 10)) * 10;
   $work_time = 0;
@@ -41,4 +41,4 @@ $input_line = trim(fgets((STDIN)));
 $input_line = str_replace(array("\r\n", "\r", "\n"), '', $input_line);
 [$n, $x, $f, $s] = explode(" ", $input_line);
 
-echo program_work_simulation($n, $x, $f, $s) . "\n";
+echo programWorkSimulation($n, $x, $f, $s) . "\n";

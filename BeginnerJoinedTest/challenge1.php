@@ -17,7 +17,7 @@ for ($i = 0; $i < $ride_count; $i++) {
 
   $sapica->payment($amount);
 
-  array_push($results, [$sapica->get_amount(), $sapica->get_point()]);
+  array_push($results, [$sapica->getAmount(), $sapica->getPoint()]);
 }
 
 foreach ($results as $result) {
@@ -37,12 +37,12 @@ class Sapica
     $this->amount = $amount;
   }
 
-  public function get_amount()
+  public function getAmount()
   {
     return $this->amount;
   }
 
-  public function get_point()
+  public function getPoint()
   {
     return $this->point;
   }

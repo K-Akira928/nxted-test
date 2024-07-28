@@ -1,6 +1,6 @@
 <?php
 // 課題3 RPGお買い物シミュレーション
-function rpb_buy_simulation()
+function rpbBuySimulation()
 {
   $_ = trim(fgets((STDIN)));
 
@@ -25,4 +25,4 @@ function rpb_buy_simulation()
   return $amount;
 }
 
-echo rpb_buy_simulation() . "\n";
+echo rpbBuySimulation() . "\n";

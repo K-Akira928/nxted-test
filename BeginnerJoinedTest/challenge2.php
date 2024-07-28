@@ -5,8 +5,7 @@ $height_width = trim(fgets((STDIN)));
 $height_width = str_replace(array("\r\n", "\r", "\n"), '', $height_width);
 [$height, $width] = explode(" ", $height_width);
 
-// ヒットしたかどうかを配列化
-function input_board_hit_info($height)
+function inputBoardHitInfo($height)
 {
   $board_lines = [];
 
@@ -18,8 +17,7 @@ function input_board_hit_info($height)
   return $board_lines;
 }
 
-// ヒットした箇所のスコアを配列化
-function input_board_score_info($height)
+function inputBoardScoreInfo($height)
 {
   $board_lines = [];
 
@@ -31,8 +29,7 @@ function input_board_score_info($height)
   return $board_lines;
 }
 
-// ヒット情報とスコア情報でスコアを計算
-function board_hit_score($height, $width, $hits, $scores)
+function boardHitScore($height, $width, $hits, $scores)
 {
   $score = 0;
   for ($i = 0; $i < ($height * $width); $i++) {
@@ -41,8 +38,8 @@ function board_hit_score($height, $width, $hits, $scores)
   return $score;
 }
 
-$hits = input_board_hit_info($height);
-$scores = input_board_score_info($height);
+$hits = inputBoardHitInfo($height);
+$scores = inputBoardScoreInfo($height);
 
-$score = board_hit_score($height, $width, $hits, $scores);
+$score = boardHitScore($height, $width, $hits, $scores);
 echo $score . "\n";
