@@ -1,5 +1,15 @@
 <?php
 // 課題3 RPGお買い物シミュレーション
+
+/**
+ * 買い物をシミュレーションする
+ *
+ * @var int[] $tool_prices
+ * @var int $amount
+ * @var int $order_count
+ *
+ * @return int $amount
+ */
 function rpbBuySimulation()
 {
   $_ = trim(fgets((STDIN)));

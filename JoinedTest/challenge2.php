@@ -1,5 +1,20 @@
 <?php
 // 課題2 プログラム時間シミュレーション問題
+
+/**
+ * プログラムにかかる時間をシミュレーションする
+ *
+ * @param int $n
+ * @param int $x
+ * @param int $f
+ * @param int $s
+ *
+ * @var int $work_time
+ * @var int $work_rows
+ * @var int $hour_working_effect
+ *
+ * @return int $work_time
+ */
 function programWorkSimulation($n, $x, $f, $s)
 {
   $x = ceil(($x / 10)) * 10;

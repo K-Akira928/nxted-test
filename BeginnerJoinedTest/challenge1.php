@@ -24,10 +24,14 @@ foreach ($results as $result) {
   echo $result[0] . " " .  $result[1] . "\n";
 }
 
-
-// Sapicaクラスでカード内の数値を管理
 class Sapica
 {
+  /**
+   * @var int $amount カード内残高
+   * @var int $point カード内ポイント
+   * @var $point_rate 購入時のポイント変換レート
+   */
+
   private $amount;
   private $point = 0;
   private $point_rate = 0.1;
@@ -37,16 +41,33 @@ class Sapica
     $this->amount = $amount;
   }
 
+  /**
+   * カード内の残高を取得する
+   *
+   * @return int
+   */
   public function getAmount()
   {
     return $this->amount;
   }
 
+  /**
+   * カード内のポイントを取得する
+   *
+   * @return int
+   */
   public function getPoint()
   {
     return $this->point;
   }
 
+  /**
+   * 購入処理
+   * ポイントが購入額を上回っていた場合、ポイントを使用
+   *
+   * @param int $amount
+   * @return void
+   */
   public function payment($amount)
   {
     if ($this->point >= $amount) {

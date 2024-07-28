@@ -1,5 +1,16 @@
 <?php
 // 課題4 幸運な日計算プログラム
+
+/**
+ * 幸運な日をカウントする
+ *
+ * @param int $fortune_day
+ *
+ * @var int $day_count
+ * @var int $length
+ *
+ * @return $day_count
+ */
 function getFortuneDays($fortune_day)
 {
   $day_count = 0;
